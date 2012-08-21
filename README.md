@@ -1,108 +1,21 @@
-Flask Cloud
-============
-
-<pre><code>
-
-                                           i#######t                       
-                                        ;#############W                    
-                                      .#################K                  
-                                     #####################                 
-                                    #######################                
-                                   #########################f              
-                   .###L          ###########################              
-                t##########      #############################             
-              .##############   K##############################            
-             #################  ###############################            
-            ####################################################           
-           :####################################################           
-           #####################################################G          
-          #######################################################          
-          #######################################################          
-          #######################################################          
-         D#######################################################          
-         ########################################################          
-         ########################################################          
-         ########################################################          
-         W#######################################################          
-          ##################W########################:###########          
-        L#################   ######################   ############D        
-      ;#######         L##   ######################   ##############j      
-     ##########  ##### ####  #######################  ################     
-    ###########  ##########  #######################  #################    
-   ############  ##########  #######################  ##################   
-  :############  ####E#####  #######################  ##################t  
-  #############  #### #####  ######   ######    ####  ## ;ffE############  
- K#############      f#####  ####  ##  #### ### ####  ###  ############### 
- ##############  ### f#####  #### ###  ###W ####D###  ## ################# 
- ##############  ####f#####  ########  ####   ######  # ################## 
-E##############  ##########  ######    #####    ####     ##################
-###############  ##########  ####  ##  #######  .###  #G .#################
-###############  ##########  ###  ###  ### ####  ###  ##  K################
-###############  ##########  ###  G#G   ,#  ### E###  ###  t###############
-##############     #######     ##   ## G###    W###     ##   ##############
-###########################################################################
-E##########################################################################
- ######################################################################### 
- ######################################################################### 
- E######################################################################## 
-  #######################################################################  
-  :#####################################################################i  
-   #####################################################################   
-    ###################################################################    
-     #################################################################     
-      :#############################################################i      
-        j#########################################################L        
-           G###################################################D    
-
-</code></pre>
-
+Shareabouts Flask Starter Client
+================================
 
 What is this?
 -------------
 
-A template to get your [Flask](http://flask.pocoo.org/) app running on
-[DotCloud](https://www.dotcloud.com/) as fast as possible. For added
-convenience, the templates use [Twitter's Bootstrap CSS
-framework](http://twitter.github.com/bootstrap/) to help you, as a
-developer, go from an idea to a working site.
-
-All of the CSS stylesheets are written using the [Less
-CSS](http://lesscss.org/) syntax. If you're using Mac OS X for
-development, make sure to check out [incident57's
-Less.app](http://incident57.com/less/).
-
-Alternatively, there's a Less binary compiler that works similarly on
-the commandline, or you can always use the [`less.js`
-script](https://raw.github.com/cloudhead/less.js/master/dist/less-1.1.4.js)
-in your website otherwise -- it's incredibly fast. For instance, if you
-visit the [Less CSS site](http://lesscss.org), notice that it doesn't
-link to any CSS files. **NOTE**: You can hotlink the [minified
-less.js](http://cdnjs.cloudflare.com/ajax/libs/less.js/1.1.3/less-1.1.3.min.js)
-from [CDN JS](http://www.cdnjs.com/).
-
-
-Why should I use this?
-----------------------
-
-Everything I've learned from writing and maintaining the [Flask
-Engine](https://github.com/zachwill/flask-engine) template for Google
-App Engine has made its way into this repo, too. The goal is to make a
-simple repo that can be cloned and added to for the majority of projects
-going forward, while also staying minimal in size and complexity.
-
-As an added bonus, while this repo does cater to DotCloud's hosting
-service, the `bootstrap.py` file was created to help others clone this
-repo and use Flask with other hosting providers (such as Amazon, Heroku, and
-Rackspace).
-
+A template to get your [Shareabouts](http://shareabouts.org) client app running on
+[DotCloud](https://www.dotcloud.com/) as fast as possible. This starter kit is based
+off of [zachwill](https://github.com/zachwill)'s
+[Flask Cloud](https://github.com/zachwill/flask_cloud) project.
 
 Instructions
 ------------
 
 First, you'll need to clone the repo.
 
-    $ git clone git@github.com:zachwill/flask-cloud.git
-    $ cd flask-cloud
+    $ git clone git@github.com:openplans/shareabouts-flask-client.git
+    $ cd shareabouts-flask-client
 
 Second, let's download `pip`, `virtualenv`, and the DotCloud CLI.
 
@@ -152,13 +65,6 @@ need to update the `requirements.txt` file. One way that this can be
 done is with `pip freeze`.
 
     $ pip freeze > requirements.txt
-
-
-Rather Use Heroku?
-------------------
-
-If you'd rather use Heroku for hosting, I've authored a near exact
-[boilerplate skeleton](http://github.com/zachwill/flask_heroku), as well.
 
 
 Other Hosting Environments
