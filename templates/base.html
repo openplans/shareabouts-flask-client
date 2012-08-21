@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>{% block title %}yoursite.com{% endblock %}</title>
+  <title>{% block title %}Shareabouts Flask{% endblock %}</title>
 
   <meta name="description" content="">
   <meta name="author" content="">
@@ -17,18 +17,8 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/css/main.css">
   {% block css %}{% endblock %}
-
-  <link rel="shortcut icon" href="/static/favicon.ico">
-  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/static/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/static/apple-touch-icon-114x114.png">
-
-  <!-- Modernizr for the win... -->
-  <script src="/static/js/libs/modernizr-2.0.6.js"></script>
-
 </head>
 
 <body>
@@ -48,14 +38,8 @@
 
   <!-- JavaScript at the bottom for fast page loading -->
 
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/static/js/libs/jquery-1.6.4.min.js">\x3C/script>')</script>
-
-
-  <!-- Bootstrap JavaScript -->
-  <script src="/static/js/libs/bootstrap-dropdown.js"></script>
-
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   {% block js %}{% endblock %}
 
 
@@ -66,7 +50,6 @@
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
-
 
   <!-- Prompt IE 6-7 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
