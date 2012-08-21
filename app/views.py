@@ -14,7 +14,7 @@ views = Blueprint('views', __name__, static_folder='../static',
 @views.route('/')
 def home():
     """Render website's home page."""
-    return render_template('home.html')
+    return render_template('index.html')
 
 
 # The functions below should be applicable to all Flask apps.
