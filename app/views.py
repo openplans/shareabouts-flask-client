@@ -17,26 +17,7 @@ def home():
     return render_template('home.html')
 
 
-@views.route('/about/')
-def about():
-    """Render the website's about page."""
-    return render_template('about.html')
-
-
 # The functions below should be applicable to all Flask apps.
-
-@views.route('/<file_name>.txt')
-def send_text_file(file_name):
-    """Send your static text file."""
-    file_dot_text = file_name + '.txt'
-    return views.send_static_file(file_dot_text)
-
-
-@views.route('/qunit/')
-def qunit():
-    """Render a QUnit page for JavaScript tests."""
-    return render_template('test_js.html')
-
 
 @views.after_request
 def add_header(response):
