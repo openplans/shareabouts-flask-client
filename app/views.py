@@ -6,15 +6,22 @@ application.
 """
 
 from flask import Blueprint, render_template, request, redirect, url_for
+from proxy import proxy_view
 
 views = Blueprint('views', __name__, static_folder='../static',
                   template_folder='../templates')
 
 
 @views.route('/')
-def home():
-    """Render website's home page."""
+def index():
+    """Render website's index page."""
     return render_template('index.html')
+
+@views.route('/temp')
+def index():
+    """This is to help us debug proxy.py. Please ignore."""
+    response = proxy_view('http://google.com')
+    return response
 
 
 # The functions below should be applicable to all Flask apps.
