@@ -8,3 +8,4 @@ Generate good secret keys:  http://flask.pocoo.org/docs/quickstart/#sessions
 """
 
 SECRET_KEY = "this_is_my_secret_key_that_I_should_change_with_os.urandom"
+DATASET_ROOT = "http://sapistaging-civicworks.dotcloud.com/api/v1/owner/datasets/dataset/"

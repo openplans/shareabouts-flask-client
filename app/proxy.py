@@ -13,7 +13,8 @@ def proxy_view(url, requests_args=None):
     them in the requests_args dictionary.
     """
     requests_args = (requests_args or {}).copy()
-    headers = dict(request.headers)  # Maybe?
+    headers = dict([(key.upper(), value)
+                    for key, value in request.headers.items()])
 
     if 'headers' not in requests_args:
         requests_args['headers'] = {}
@@ -24,7 +25,13 @@ def proxy_view(url, requests_args=None):
 
     # Explicitly set content-length request header, as some servers will
     # want it and complain without it.
-    headers['Content-Length'] = unicode(len(requests_args['data']))
+    if 'CONTENT-LENGTH' not in headers or not headers['CONTENT-LENGTH']:
+        headers['CONTENT-LENGTH'] = str(len(requests_args['data']))
+
+    # Mask the host; let requests set the host to the correct value for us.
+    if 'HOST' in headers:
+        del headers['HOST']
+
     requests_args['headers'].update(headers)
 
     response = requests.request(request.method, url, **requests_args)

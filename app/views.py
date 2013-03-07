@@ -7,20 +7,22 @@ application.
 
 from flask import Blueprint, render_template, request, redirect, url_for
 from proxy import proxy_view
+from . import settings
 
 views = Blueprint('views', __name__, static_folder='../static',
                   template_folder='../templates')
 
 
 @views.route('/')
-def index():
+def home():
     """Render website's index page."""
     return render_template('index.html')
 
-@views.route('/temp')
-def index():
-    """This is to help us debug proxy.py. Please ignore."""
-    response = proxy_view('http://google.com')
+
+@views.route('/api/<path:api_path>')
+def api(api_path):
+    """This is a simple API proxy."""
+    response = proxy_view(settings.DATASET_ROOT + api_path)
     return response
 
 
